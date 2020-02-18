@@ -46,6 +46,7 @@ class Song
     new_song = self.find_or_create_by_name(song_name)
     new_artist = Artist.find_or_create_by_name(artist_name)
     new_song.artist=(new_artist)
+    new_song 
     #binding.pry
   end
   def self.create_from_filename(file_name)
