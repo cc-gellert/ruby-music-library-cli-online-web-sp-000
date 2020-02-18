@@ -41,7 +41,7 @@ class Song
     splits = filename.split(" - ")
     song_name = splits[1]
     artist_name = splits[0]
-    genre_name = splits[2].split(".")
+    genre_name = splits[2].split(".")[0] 
     new_song = self.find_or_create_by_name(song_name)
     new_artist = Artist.find_or_create_by_name(artist_name)
     new_song.artist=(new_artist)
